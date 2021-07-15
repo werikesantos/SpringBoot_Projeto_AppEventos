@@ -4,18 +4,47 @@
 	  
 	<head>
 		<title>EventosApp</title>
+		
+		<!-- IMPORTAÇÕES DO MATERIALIZER -->
+		<!-- SITE: https://materializecss.com/getting-started.html -->
+		
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+	
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	</head>
 	
 	<body>
-		<h1>Cadastro de Eventos</h1>
-		<form method="POST">
-			Nome: <input type="text" value="" name="nome"/><br><br>
-			Local: <input type="" value="" name="local"/><br><br>
-			Data: <input type="date" value="" name="data"/><br><br>
-			Horario: <input type="time" value="" name="horario"/><br><br>
-
-			<button type="submit">Salvar</button>
+		<h1 class="container">Cadastro de Eventos</h1><br>
+		<h3 class="container input-field col s12"><a href="/eventos" class="waves-effect waves-light btn"><i class="material-icons left">dehaze</i>Lista de Eventos</a></h3><br>
+		<form class="container" method="POST">
+			<div class="row">
+				<div class="input-field col s12">
+					Nome: <input type="text" value="" name="nome"/>
+				</div>
+				<div class="input-field col s6"><!-- col s6 => DIVIDE COLUNAS AO TOTAL DE 12. OU SEJA, 6 + 3 + 3-->
+					Local: <input type="text" value="" name="local"/>
+				</div>
+				<div class="input-field col s3">
+					Data: <input type="date" value="" name="data"/>
+				</div>
+				<div class="input-field col s3">
+					Horario: <input type="time" value="" name="horario"/>
+				</div>
+				<div class="input-field col s1">
+					<button class="waves-effect waves-light btn" type="submit">Salvar</button>
+				</div>
+			</div>
+			
 		</form>
+		
+		<!-- IMPORTAÇÕES DO MATERIALIZER -->
+		<!-- SITE: https://materializecss.com/getting-started.html -->
+		<!--JavaScript at end of body for optimized loading-->
+		<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 	</body>
 
 </html>
