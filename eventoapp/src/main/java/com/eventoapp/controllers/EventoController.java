@@ -26,7 +26,12 @@ public class EventoController {
 	@RequestMapping(value = "/cadastrarEvento", method = RequestMethod.POST)
 	public String form(Evento evento) {
 		
-		eventoRepository.save(evento);
+		if(evento.getNome() != null) {
+			System.out.println("Prencher todos os campos");
+		}else {
+			eventoRepository.save(evento);
+		}
+		
 		
 		return "redirect:/cadastrarEvento";
 	}
