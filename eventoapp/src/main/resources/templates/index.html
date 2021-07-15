@@ -1,11 +1,26 @@
-<html>
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
 	<head>
 	
+		<title>EventosApp</title>
+		
 	</head>
 	
 	<body>
-		<h1>Olá, Mundo!</h1>
+		<h1>Lista de Eventos</h1>
+		<h3><a href="/cadastrarEvento">Cadastrar Evento</a></h3>
+		
+		<!-- 'th' É UM THYMELEAF.  'th:each' É UM FOR EACH DE OBJETOS => PARA CADA OBJETO '${evento}' -->
+		<div th:each="evento : ${eventos}">
+		<h5>Detalhes do Evento</h5>
+		<div class="row">
+			<p>Nome: <span th:text="${evento.nome}"></span></p><!-- PARA ACESSAR O OBJETO É NECESSARIO ESTAR DENTRO DE UM '<SPAN>' -->
+			<p>Local: <span th:text="${evento.local}"></span></p>
+			<p>Data: <span th:text="${evento.data}"></span></p>
+			<p>Horario: <span th:text="${evento.horario}"></span></p>
+		</div>
 	</body>
 
 </html>
